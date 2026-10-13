@@ -13,6 +13,10 @@
 #ifndef LITE_VERSION
 #include "modules/rfid/emv_reader.hpp"
 #endif
+
+// --- TUTAJ DODALIŚMY DEKLARACJĘ TWOJEJ FUNKCJI ---
+void run_rfid_fuzzer();
+
 void RFIDMenu::optionsMenu() {
     options = {
 #if !defined(REMOVE_RFID_HW_INTERFACE)  // Remove Hardware interface menu due to lack of external GPIO
@@ -50,6 +54,10 @@ void RFIDMenu::optionsMenu() {
     options.push_back({"PN532 UART", [=]() { PN532KillerTools(); }});
 #endif
 #endif
+
+    // --- TUTAJ WPIĘLIŚMY TWOJĄ NOWĄ POZYCJĘ DO MENU ---
+    options.push_back({"RFID Fuzzer", [=]() { run_rfid_fuzzer(); }});
+
     options.push_back({"Config", [this]() { configMenu(); }});
 
 #if !defined(REMOVE_RFID_HW_INTERFACE)
