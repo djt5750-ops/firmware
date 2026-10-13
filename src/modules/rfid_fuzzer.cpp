@@ -69,3 +69,4 @@ void run_rfid_fuzzer() {
         }
     }
 }
+    
