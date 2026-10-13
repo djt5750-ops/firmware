@@ -14,7 +14,6 @@
 #include "modules/rfid/emv_reader.hpp"
 #endif
 
-// --- TUTAJ DODALIŚMY DEKLARACJĘ TWOJEJ FUNKCJI ---
 void run_rfid_fuzzer();
 
 void RFIDMenu::optionsMenu() {
